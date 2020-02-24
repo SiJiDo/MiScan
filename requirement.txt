@@ -1,0 +1,5 @@
+optparse
+requests
+lxml
+urllib
+BeautifulSoup4

@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Python Bindings for Berkeley DB 4.7, 4.8, 5.1, 5.3, 6.1 and 6.2 &#8212; PyBSDDB 6.2.7 documentation</title>
+    <link rel="stylesheet" href="static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Berkeley DB 4.7, 4.8, 5.1, 5.3, 6.1 and 6.2 Python Extension Package" href="introduction.html" />
+   
+  <link rel="stylesheet" href="static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="python-bindings-for-berkeley-db-4-7-4-8-5-1-5-3-6-1-and-6-2">
+<h1>Python Bindings for Berkeley DB 4.7, 4.8, 5.1, 5.3, 6.1 and 6.2<a class="headerlink" href="#python-bindings-for-berkeley-db-4-7-4-8-5-1-5-3-6-1-and-6-2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This handcrafted package contains Python wrappers for <a class="reference external" href="http://www.oracle.com/technetwork/database/berkeleydb/overview/index.html">Berkeley DB</a>,
+the Open Source embedded database system. Berkeley DB is a programmatic
+toolkit that provides high-performance built-in database support for
+desktop and server applications.</p>
+<p>The Berkeley DB access methods include B+tree, Extended Linear Hashing,
+Fixed and Variable-length records, and Queues. Berkeley DB provides full
+transactional support, database recovery, online backups, multi-threaded
+and multi-process access, etc.</p>
+<p>The Python wrappers allow you to store Python string objects of any
+length, keyed either by strings or integers depending on the database
+access method. With the use of another module in the package standard
+shelve-like functionality is provided allowing you to store any
+picklable Python object!</p>
+<p>Berkeley DB is very powerful and versatile, but it is complex to
+use correctly. <a class="reference external" href="https://docs.oracle.com/cd/E17076_05/html/toc.htm">Oracle documentation</a> is very
+complete. Please, review it.</p>
+<p>Since June 2013 (release 6.0.0), this project accepts donations. Please,
+contribute if you can. Details.</p>
+</div>
+<div class="section" id="documentation-index">
+<h2>Documentation Index<a class="headerlink" href="#documentation-index" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Berkeley DB 4.7, 4.8, 5.1, 5.3, 6.1 and 6.2 Python Extension Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#types-provided">Types Provided</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#top-level-functions">Top level functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#exceptions-provided">Exceptions Provided</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#other-package-modules">Other Package Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#reference">Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dbenv.html">DBEnv</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dbenv.html#dbenv-attributes">DBEnv Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dbenv.html#dbenv-methods">DBEnv Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dbenv.html#dbenv-replication-manager-methods">DBEnv Replication Manager Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dbenv.html#dbenv-replication-methods">DBEnv Replication Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="db.html">DB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db-methods">DB Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db-mapping-and-compatibility-methods">DB Mapping and Compatibility Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dbcursor.html">DBCursor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dbcursor.html#dbcursor-methods">DBCursor Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dbcursor.html#dbcursor-get-methods">DBCursor Get Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dblogcursor.html">DBLogCursor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dblogcursor.html#dblogcursor-methods">DBLogCursor Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dblogcursor.html#dblogcursor-get-methods">DBLogCursor Get Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dbtxn.html">DBTxn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dbtxn.html#dbtxn-methods">DBTxn Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dblock.html">DBLock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbsequence.html">DBSequence</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dbsequence.html#dbsequence-methods">DBSequence Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dbsite.html">DBSite</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dbsite.html#dbsite-methods">DBSite Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">LICENSE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="license.html#license-text-bsd-3-clause-license">License Text (BSD 3-Clause License)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#license-of-individual-files">License of individual files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="license.html#license-of-python-files">License of Python files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="license.html#license-of-c-files">License of C files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="donate.html">DONATE!</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">PyBSDDB</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Berkeley DB 4.7, 4.8, 5.1, 5.3, 6.1 and 6.2 Python Extension Package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbenv.html">DBEnv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="db.html">DB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbcursor.html">DBCursor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dblogcursor.html">DBLogCursor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbtxn.html">DBTxn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dblock.html">DBLock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbsequence.html">DBSequence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbsite.html">DBSite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">LICENSE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donate.html">DONATE!</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="introduction.html" title="next chapter">Berkeley DB 4.7, 4.8, 5.1, 5.3, 6.1 and 6.2 Python Extension Package</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2008-2020 Jesus Cea Avion.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
